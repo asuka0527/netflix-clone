@@ -36,7 +36,7 @@ export function BrowseContainer({ slides }) {
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
-
+  // comment
   // live search
   useEffect(() => {
     const fuse = new Fuse(slideRows, {
@@ -49,6 +49,7 @@ export function BrowseContainer({ slides }) {
       setSlideRows(results);
     } else {
       setSlideRows(slides[category]);
+      console.log(category);
     }
   }, [searchTerm]);
 
